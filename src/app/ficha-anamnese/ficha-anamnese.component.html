@@ -1,0 +1,129 @@
+<body>
+    <h1 class="text-center titulo-h1">Ficha Anamnese</h1>
+    <div class="form-group">
+        <input placeholder="Nome do cliente" class="form-control" type="text" [(ngModel)]="nomeCliente"/>
+    </div>
+    <div class="form-group">
+        <input placeholder="Endereço do cliente" class="form-control" [(ngModel)]="enderecoCliente"/>
+    </div>
+    <div class="form-group">
+        <input placeholder="CPF ou RNE do cliente" class="form-control" [(ngModel)]="cpfCliente"/>
+    </div>
+    <div class="form-group">
+        <input placeholder="Telefone do cliente" class="form-control" [(ngModel)]="telefoneCliente" />
+    </div>
+    <div class="form-group">
+        <input placeholder="E-mail do cliente" class="form-control" [(ngModel)]="emailCliente" />
+    </div>
+    <div class="form-group">
+        <input placeholder="Data de nascimento do cliente" class="form-control" [(ngModel)]="nascCliente" />
+    </div>
+    <div class="form-group">
+        <input placeholder="Tipo de calçado usado" class="form-control" [(ngModel)]="calcadoUsado" />
+    </div>
+
+    <!--AVALIAÇÃO-->
+    <div class="form-group">
+        <input placeholder="Tipo de meia usada" class="form-control" [(ngModel)]="tipomeia" />
+    </div>
+    <div class="form-group">
+        <input placeholder="Possui alguma sensibilidade a dor? Descreva" class="form-control"
+        [(ngModel)]="sensibilidade" />
+    </div>
+    <div class="form-group">
+        <input placeholder="Observações sobre o pé esquerdo do paciente" class="form-control"
+        [(ngModel)]="obsPeEsquerdo" />
+    </div>
+    <div class="form-group">
+        <input placeholder="Observações sobre o pé direito do paciente" class="form-control"
+            [(ngModel)]="obsPeDireito" />
+    </div>
+    <!--avaliação boolean-->
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <div class="input-group-text">
+                <input type="checkbox" id="avaliacao__cirurgia" [(ngModel)]="cirurgia"/>
+                <label for="avaliacao__cirurgia">Fez cirurgia nos membros inferiores</label>
+            </div>
+
+            <div class="input-group-text">
+                <input id="avaliacao__diabetes" type="checkbox" [(ngModel)]="diabetes"/>
+                <label for="avaliacao__diabetes">Tem diabetes</label>
+            </div>
+
+            <div class="input-group-text">
+                <input id="avaliacao__cardiopatia" type="checkbox" [(ngModel)]="cardiopatia"/>
+                <label for="avaliacao__cardiopatia">Tem cardiopatia</label>
+            </div>
+            <div class="input-group-text">
+                <input id="avaliacao__marcaPassosOuPino" type="checkbox" [(ngModel)]="marcapassos"/>
+                <label for="avaliacao__marcaPassosOuPino">Tem marcapassos ou pinos</label>
+            </div>
+            <div class="input-group-text">
+                <input id="avaliacao__hepatite" type="checkbox" [(ngModel)]="hepatite"/>
+                <label for="avaliacao__hepatite">Tem hepatite</label>
+            </div>
+            <div class="input-group-text">
+                <input id="avaliacao__hipoHipertensaoArterial" type="checkbox"
+                [(ngModel)]="hipertensao" />
+                <label for="avaliacao__hipoHipertensaoArterial">Tem hipo ou hipertensão arterial</label>
+            </div>
+            <div class="input-group-text">
+                <input id="avaliacao__hanseniase" type="checkbox" [(ngModel)]="hanseniase" />
+                <label for="avaliacao__hanseniase">Tem hanseníase</label>
+            </div>
+            <div class="input-group-text">
+                <input id="avaliacao__cancer" type="checkbox" [(ngModel)]="cancer" />
+                <label for="avaliacao__cancer">Tem algum tipo de câncer</label>
+            </div>
+            <div class="input-group-text">
+                <input id="avaliacao__disturbioCirtulatorio" type="checkbox"
+                    [(ngModel)]="disturbioCirculatorio" />
+                <label for="avaliacao__disturbioCirtulatorio">Tem algum tipo de distúrbio circulatório</label>
+            </div>
+        </div>
+    </div>
+
+    <!--avaliação array de string-->
+    <div *ngFor="let medicamento of medicamentos; let indexOfElement=index">
+        <div class="btn btn-info">
+            {{medicamento}}
+            <a (click)="removeMedicamentos(indexOfElement)" type="button" class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </a>
+        </div>
+    </div>
+    <div class="input-group-text">
+        <input id="avaliacao__medicamento" />
+        <a (click)="addMedicamentos()" class="btn btn-secondary">Adicionar medicamento</a>
+    </div>
+
+    <div *ngFor="let alergia of alergias; let indexOfElement=index">
+        <div class="btn btn-info">
+            {{alergia}}
+            <a (click)="removeAlergia(indexOfElement)" type="button" class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </a>
+        </div>
+    </div>
+    <div class="input-group-text">
+        <input id="avaliacao__alergia" />
+        <a (click)="addAlergia()" class="btn btn-secondary">Adicionar alergia</a>
+    </div>
+
+    <div *ngFor="let esporte of esportesPraticados; let indexOfElement=index">
+        <div class="btn btn-info">
+            {{esporte}}
+            <a (click)="removeEsportePraticado(indexOfElement)" type="button" class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </a>
+        </div>
+    </div>
+    <div class="input-group-text">
+        <input id="avaliacao__esporte_praticado" />
+        <a (click)="addEsportesPraticados()" class="btn btn-secondary">Adicionar esporte praticado</a>
+    </div>
+    <app-analise-pes></app-analise-pes>
+    <button class="btn btn-primary" (click)="generateA4()">Cadastrar</button>
+       
+</body>

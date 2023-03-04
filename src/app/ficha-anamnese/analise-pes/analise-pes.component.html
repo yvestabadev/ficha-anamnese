@@ -1,0 +1,32 @@
+<h5>Selecione um item para adicionar à análise dos pés do cliente</h5>
+<select id="select__anomalia">
+    <option value="Verruga Plantar">Verruga Plantar</option>
+    <option value="Calo">Calo</option>
+    <option value="Calosidades">Calosidades</option>
+    <option value="Fissuras">Fissuras</option>
+</select>
+<div style="padding-bottom: 2em;" class="d-flex flex-column text-center">
+    <h6>Visão Plantar</h6>
+    <div class="d-flex flex-row justify-content-center">
+        <div class="figura__pe" id="figura__pe_direito_plantar">
+            <table class="table__figura_pe">
+                <tr *ngFor="let y of coordenadasY">
+                    <td *ngFor="let x of coordenadasX"
+                        (click)="pintarCoordenada('Direito', 'Plantar', x, y)" class="coordenada"></td>
+                </tr>
+            </table>
+            <h6>Direito</h6>
+        </div>
+        <div class="figura__pe" id="figura__pe_esquerdo_plantar">
+            <table class="table__figura_pe">
+                <tr *ngFor="let y of coordenadasY">
+                    <td *ngFor="let x of coordenadasX"
+                        (click)="pintarCoordenada('Esquerdo', 'Plantar', x, y)" class="coordenada"></td>
+                </tr>
+            </table>
+            <h6>Esquerdo</h6>
+        </div>
+    </div>
+</div>
+<a href='https://br.freepik.com/fotos-vetores-gratis/clipart'>Clipart vetor criado por brgfx -
+    br.freepik.com</a>

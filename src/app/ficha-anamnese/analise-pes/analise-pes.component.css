@@ -1,0 +1,30 @@
+#figura__pe_direito_plantar {
+    background-image: url('../../../assets/img/pe_direito.jpg');
+}
+
+#figura__pe_esquerdo_plantar {
+    background-image: url('../../../assets/img/pe_esquerdo.jpg');
+}
+
+.figura__pe {
+    width: 80px;
+    height: 180px;
+    background-size: cover;
+    margin: 1em;
+}
+
+table,tr, .coordenada{
+    border: 1px dotted;
+    border-color: rgba(165, 165, 165, 0.7);
+}
+
+.table__figura_pe {
+    width: inherit;
+    height:inherit;
+    table-layout: fixed;
+}
+
+.coordenada {
+    padding: 2.5% 5% 2.5% 5%;
+    cursor: pointer;
+}
