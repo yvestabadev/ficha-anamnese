@@ -28,5 +28,28 @@
         </div>
     </div>
 </div>
+<div style="padding-bottom: 2em;" class="d-flex flex-column text-center">
+    <h6>Visão Dorsal</h6>
+    <div class="d-flex flex-row justify-content-center">
+        <div class="figura__pe" id="figura__pe_esquerdo_dorsal">
+            <table class="table__figura_pe">
+                <tr *ngFor="let y of coordenadasY">
+                    <td *ngFor="let x of coordenadasX"
+                        (click)="pintarCoordenada('Esquerdo', 'Dorsal', x, y)" class="coordenada"></td>
+                </tr>
+            </table>
+            <h6>Esquerdo</h6>
+        </div>
+        <div class="figura__pe" id="figura__pe_direito_dorsal">
+            <table class="table__figura_pe">
+                <tr *ngFor="let y of coordenadasY">
+                    <td *ngFor="let x of coordenadasX"
+                        (click)="pintarCoordenada('Direito', 'Dorsal', x, y)" class="coordenada"></td>
+                </tr>
+            </table>
+            <h6>Direito</h6>
+        </div>
+    </div>
+</div>
 <a href='https://br.freepik.com/fotos-vetores-gratis/clipart'>Clipart vetor criado por brgfx -
     br.freepik.com</a>
