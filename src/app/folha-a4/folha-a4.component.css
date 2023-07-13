@@ -1,0 +1,18 @@
+.folha{
+    padding: 80px;
+    width: 840px;
+    height: 1188px;
+    border: 1px solid black;
+}
+
+.sessao__a4{
+    width: 100%;
+}
+
+.sessao__a4 h3{
+    text-align: center;
+}
+
+.sessao__a4 span{
+    padding-right: 24px;
+}

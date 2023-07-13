@@ -1,0 +1,23 @@
+<button (click)="format()">formatar</button>
+<div class="d-flex flex-row justify-content-center">
+    <div class="folha">
+        <h2>Ficha Anamnese</h2>
+        <div class="sessao__a4">
+            <h3>Informações Pessoais</h3>
+            <span><strong>Nome:</strong> {{ficha?.nomeCliente}}</span>
+            <span>Endereço: {{ficha?.enderecoCliente}}</span>
+            <span>CPF ou RNE: {{ficha?.cpfCliente}}</span>
+            <span>Telefone: {{ficha?.telefoneCliente}}</span>
+            <span>E-mail: {{ficha?.emailCliente}}</span>
+            <span>Data de nascimento: {{ficha?.nascCliente}}</span>
+        </div>
+        <div class="sessao__a4">
+            <h3>Avaliação Física</h3>
+            <span>Calçado usado: {{ficha?.calcadoUsado}}</span>
+            <span>Tipo de meia usada: {{ficha?.tipomeia}}</span>
+            <span>Possui sensibilidade a dor? {{ficha?.sensibilidade}}</span>
+            <span>Observação sobre o pé esquerdo: {{ficha?.obsPeEsquerdo}}</span>
+            <span>Observação sobre o pé direito: {{ficha?.obsPeDireito}}</span>
+        </div>
+    </div>
+</div>
